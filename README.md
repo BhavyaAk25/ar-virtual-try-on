@@ -35,7 +35,7 @@ Unlike simple 2D image overlays, this system uses **true 3D rendering** with pro
 ### Quick Start (macOS/Linux)
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/ar-virtual-try-on.git
+git clone https://github.com/BhavyaAk25/ar-virtual-try-on.git
 cd ar-virtual-try-on
 chmod +x setup.sh
 ./setup.sh
@@ -47,7 +47,7 @@ python3 jacket_ar.py
 
 1. **Clone and navigate to project directory:**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/ar-virtual-try-on.git
+   git clone https://github.com/BhavyaAk25/ar-virtual-try-on.git
    cd ar-virtual-try-on
    ```
 
