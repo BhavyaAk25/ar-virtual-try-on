@@ -201,6 +201,9 @@ scale = (pixel_size * z_depth) / focal_length
 #### ✅ Attempt 3: Pixel-Based Adaptive System (Final Solution)
 Uses relative measurements that automatically adapt. No camera calibration needed!
 
+## 🤝 Collabratoin
+-This project was done in collabration with Rudra Dasgupta (https://github.com/rudradasgupta7)
+
 ## 🎓 Key Learnings
 
 ### What Worked
