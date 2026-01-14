@@ -330,15 +330,6 @@ Replace `jacket.glb` with your own GLB/GLTF file:
 - Virtual fitting rooms
 - Clothing design visualization
 
-## 🔮 Future Enhancements
-
-- Multiple jacket models to choose from
-- Color/material customization
-- Side and back view support
-- Full outfit try-on (pants, accessories)
-- Gesture-based UI (e.g., raise hand to cycle looks)
-- Social media sharing
-- Machine learning size recommendations
 
 ## 📝 Credits
 
@@ -352,10 +343,3 @@ Built with:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
-
-Special thanks to the development process that taught us:
-- The importance of adaptive algorithms over fixed values
-- Why pixel-based measurements beat complex 3D math for this use case
-- The value of facial landmark detection for positioning
-- That simpler solutions often work better than complex ones
