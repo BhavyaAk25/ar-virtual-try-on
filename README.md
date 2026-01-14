@@ -35,8 +35,8 @@ Unlike simple 2D image overlays, this system uses **true 3D rendering** with pro
 ### Quick Start (macOS/Linux)
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/jacket-ar.git
-cd jacket-ar
+git clone https://github.com/YOUR_USERNAME/ar-virtual-try-on.git
+cd ar-virtual-try-on
 chmod +x setup.sh
 ./setup.sh
 source venv/bin/activate
@@ -47,8 +47,8 @@ python3 jacket_ar.py
 
 1. **Clone and navigate to project directory:**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/jacket-ar.git
-   cd jacket-ar
+   git clone https://github.com/YOUR_USERNAME/ar-virtual-try-on.git
+   cd ar-virtual-try-on
    ```
 
 2. **Create virtual environment:**
@@ -104,7 +104,7 @@ python3 jacket_ar.py
 ## 📁 Project Structure
 
 ```
-jacket-ar/
+ar-virtual-try-on/
 ├── jacket_ar.py           # Main AR application (3D rendering)
 ├── jacket.glb             # 3D jacket model (15MB)
 ├── requirements.txt       # Python dependencies
