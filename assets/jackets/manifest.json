@@ -1,0 +1,27 @@
+[
+  {
+    "file": "studio_jacket.glb",
+    "name": "Studio Tailor",
+    "color": [0.20, 0.35, 0.95, 1.0],
+    "metadata": {
+      "description": "Default studio-lit jacket calibrated for true-to-color rendering.",
+      "fit": {
+        "scale": 6.5,
+        "offset": 0.5
+      }
+    }
+  },
+  {
+    "file": "t-shirt-polo.glb",
+    "name": "City Polo",
+    "color": [0.75, 0.78, 0.82, 1.0],
+    "metadata": {
+      "description": "Lightweight polo shirt cut built for casual AR fittings.",
+      "apply_scene_graph": true,
+      "fit": {
+        "scale": 3.4,
+        "offset": 0.78
+      }
+    }
+  }
+]

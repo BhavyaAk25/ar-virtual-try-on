@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# Virtual Environment
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Project specific
+captures/*.png
+captures/*.mp4
+captures/*.jpg
+logs/*.csv
+logs/*.txt
+*.log
+
+# Keep captures and logs directories but ignore contents
+!captures/.gitkeep
+!logs/.gitkeep
+
+# Temporary files
+*.tmp
+.Rhistory
+*.bak
+
+# Large model files (if you want to track them, remove this line)
+# *.glb

@@ -1,0 +1,89 @@
+Product Tech Sheet - 3D AR Jacket Try-On
+=======================================
+
+1. Plain-English Pitch
+----------------------
+Think of this app as a smart mirror that lets you "wear" a 3D jacket without touching the closet. You stand in front of your webcam and, within a second, a realistic jacket follows your shoulders, moves when you move, and keeps your face uncovered.
+
+2. What You See When It Runs
+----------------------------
+- A webcam window opens with a light green stick-figure overlay that confirms the system sees your shoulders, hips, and face.
+- A blue 3D jacket appears on your torso. It automatically grows or shrinks so it fits your body and adjusts when you walk closer or farther from the camera.
+- On-screen text shows helpful reminders plus hotkeys. Tap `p` for a photo or `v` for a video - everything lands in the `captures/` folder.
+- Use quick keys (`a/d/w/s/c/m/r`) to tweak scale, height, style, and reset without digging into code. Raise an open palm to cycle colors hands-free.
+- Quit any time with `q`.
+
+3. What You Need
+----------------
+- A laptop or desktop with Python 3.7+.
+- Basic webcam (built-in cams are fine).
+- macOS, Windows, or Linux. A GPU helps but is optional.
+- Install once with `pip install -r requirements.txt` or run `setup.sh` to automate it.
+
+4. Why It Feels Magical (Without The Jargon)
+-------------------------------------------
+- The app measures your body in pixels every single frame instead of assuming one body size. That is why the jacket always fits and keeps working as you move.
+- It watches your mouth position so the jacket sits below your face, meaning no more AR clothing covering your smile.
+- Real 3D lighting and perspective make the fabric look like it belongs in your room rather than being pasted on.
+
+5. Tech Ingredients Explained Simply
+------------------------------------
+| Piece       | Plain-English Role |
+|-------------|--------------------|
+| OpenCV      | Turns on the camera and hands us each video frame.
+| MediaPipe   | Spots 33 body points (shoulders, hips, face) so we know your shape and movements.
+| NumPy       | Acts as our fast calculator for all those pixel measurements.
+| Trimesh     | Opens and normalizes the 3D jacket file (`jacket.glb`).
+| PyRender    | Paints and lights the 3D jacket so it looks real when placed over the video.
+
+6. How A Frame Is Processed (Human Terms)
+-----------------------------------------
+1. Load the jacket model and set up lights.
+2. Turn on the webcam and start reading frames.
+3. MediaPipe draws a skeleton and tells us how wide your shoulders are and where your mouth sits.
+4. We size and position the jacket using those numbers (no tape measure needed).
+5. PyRender drops the jacket into the scene and blends it with the live video.
+6. Repeat ~30 times per second so it feels instant.
+
+7. Folder Cheat Sheet
+---------------------
+- `jacket_ar.py` - The main script; run this to launch the try-on experience.
+- `jacket.glb` - The 3D jacket model (swap this to try other garments).
+- `captures/` - Photos and MP4 videos saved whenever you press `p` or `v`.
+- `assets/` - Supporting graphics and style files.
+- `requirements.txt` - List of Python packages the installer uses.
+- `README.md`, `QUICKSTART.md`, `PROJECT_OVERVIEW.md` - Deeper dives if you want to see the full technical story.
+- `logs/` - Optional telemetry and debug info for developers.
+
+8. What Makes It Stand Out
+--------------------------
+- True 3D rendering (not just pasting a flat PNG on your shirt).
+- Automatically adapts to every body size and distance without calibration.
+- Face-aware placement keeps expressions visible.
+- Built-in control center (hotkeys + gestures) for easy, no-code adjustments.
+- One-tap media capture for demos, social posts, and testing.
+
+9. Typical Uses
+---------------
+- Showing a jacket in an online fashion store without shipping samples.
+- In-store kiosks where shoppers can test looks safely.
+- Social media AR effects for marketing launches.
+- Design teams previewing new garments in motion.
+
+10. Future-Friendly Ideas
+-------------------------
+- Swap jackets instantly from a menu of GLB files.
+- Add pants, accessories, or full outfits.
+- Gesture-only UI so you never touch the keyboard mid-demo.
+- Built-in sharing button to push captures to social channels.
+
+11. Quick Demo Script 
+----------------------------------------
+1. "Here is my laptop webcam. Stand where you would be for a selfie."
+2. Run `python3 jacket_ar.py`.
+3. "See the green skeleton? That means it understands your posture."
+4. "Watch how the jacket moves and never hides your face."
+5. Press `p` to grab a photo; show them the saved file in `captures/`.
+6. Use `a` or `d` to resize live, and raise your palm to swap colors.
+
+That is the whole story - simple enough for a friend, but still grounded in what the tech actually does.
